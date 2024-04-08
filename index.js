@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const ts = require('./utils/generateMarkdown.js');
 // TODO: Create an array of questions for user input
 const questions = ['Prodject Title name ?','provide a short description of project','what steps required to install project',' provide instructions on how to use it ',' what kind of license required for project','how to contribute to project', 'provide example of how to run test', ' Github?','Email address' ];
 
@@ -27,9 +28,10 @@ const promptUser = () => {
         message: ' provide instructions on how to use it:',
       },
       {
-        type: 'input',
+        type: 'list',
         name: 'License',
         message: ' what kind of license required for project',
+        choices: ['MIT Lincense', 'GNU GPLv3','Apache 2.0 License' ]
       },
       {
         type: 'input',
@@ -54,7 +56,7 @@ const promptUser = () => {
     ]);
   };
 
-const generateREADME = ({ Title, description, Installation, Usage, Contributing, Github, Email, Linkedin }) =>
+const generateREADME = ({ Title, description, Installation, Usage, Contributing, Github, Email, Linkedin, License }) =>
 `# <Your-Project-Title> 
 
 ${Title}
@@ -84,10 +86,10 @@ ${Usage}
 ## Contrbuting
 ${Contributing}
 ## License
-${License}
+${License} 
 
 ## Tests
-${Test}
+{Test}
 
 ## Questions?
 If you have any Questions you can reach me with the following infomation:
@@ -101,7 +103,7 @@ ${Github}
 // TODO: Create a function to write README file
 function writeToFile(Filename, data) {
     fs.writeFile(Filename, data, (err) =>
-    err ? console.log(err) : console.log('Successfully created index.html!')
+    err ? console.log(err) : console.log('Successfully created README.md!')
   );
 
 }
@@ -111,8 +113,13 @@ function init() {
 promptUser()
 
 .then((answer) => {
+//renderLicenseBadge(badge);
+//renderLicenseLink(badgeL);
+
 const txtPagecontent = generateREADME(answer);
 const filename = 'README.md';
+
+
 writeToFile( filename, txtPagecontent);
 
 })
