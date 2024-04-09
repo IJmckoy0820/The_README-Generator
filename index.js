@@ -32,8 +32,14 @@ const promptUser = () => {
             type: 'list',
             name: 'License',
             message: ' what kind of license required for project',
-            choices: ['MIT Lincense', 'GNU GPLv3', 'Apache 2.0 License']
+            choices: ['MIT Lincense', 'GNU GPLv3', 'Apache 2.0 License','None']
         },
+        {
+            type: 'input',
+            name: 'Test',
+            message: 'Describe any test use for prodject',
+        },
+
         {
             type: 'input',
             name: 'Contributing',
@@ -57,7 +63,7 @@ const promptUser = () => {
     ]);
 };
 
-const generateREADME = ({ Title, Description, Installation, Usage, Contributing, Github, Email, Linkedin, License }, badge, badgeL) =>
+const generateREADME = ({ Title, Description, Installation, Usage, Contributing, Github, Email, Linkedin, License,Test }, badge, badgeL,section) =>
     `# ${Title} ${badge}
 
 
@@ -68,12 +74,13 @@ ${Description}
 
 
 
-## Table of Contents (Optional)
+## Table of Contents 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
-
+- [Contributing](#contributing)
+- [License](#License)
+- [Test](#Tests)
+- [Question](#Questions?)
 
 ## Installation
 
@@ -84,14 +91,15 @@ ${Installation}
 
 ${Usage}
 
-## Contrbuting
+## Contributing
 ${Contributing}
-## License
+
+${section}
 ${License} 
 ${badgeL}
 
 ## Tests
-{Test}
+${Test}
 
 ## Questions?
 If you have any Questions you can reach me with the following infomation:
@@ -115,9 +123,10 @@ function init() {
     promptUser()
 
         .then((data) => {
+            const section = ts.renderLicenseSection(data);
             const badge = ts.renderLicenseBadge(data);
             const badgeL = ts.renderLicenseLink(data);
-            const txtPagecontent = generateREADME(data, badge, badgeL);
+            const txtPagecontent = generateREADME(data, badge, badgeL, section);
             const filename = 'README.md';
             console.log(badge);
 
