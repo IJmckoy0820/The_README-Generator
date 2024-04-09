@@ -72,3 +72,8 @@ You are required to submit the following for review:
 ---
 
 © 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+
+
+Video 
+
+[text](<assets/Untitled_ Apr 8, 2024 11_42 PM.webm>)
