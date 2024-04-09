@@ -1,44 +1,44 @@
-# SASASAS [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# example project [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 
 
 ## Description
 
-KJLDJQ;LDM;d;
+this is an example of readme generator
 
 
 
-## Table of Contents (Optional)
+## Table of Contents 
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
+- [License](#License)
 - [Test](#Tests)
 - [Question](#Questions?)
 
 ## Installation
 
-DJ;Smd;s,DMSmd;sALMD;S,ad,sDS
+afdAGDgdgdGDG
 
 
 ## Usage
 
-MDS;md,s;,DS,;dsDS
+AGDAGAGDAGD
 
 ## Contributing
-FSAFSAfsaF
+AGDAGDAGDgADGAG
 
 ## License 
-MIT Lincense 
-(https://opensource.org/licenses/MIT)
+GNU GPLv3 
+(https://www.gnu.org/licenses/gpl-3.0)
 
 ## Tests
-fFSfSFaafsafsaFSaf
+ADGAGDAGDA
 
 ## Questions?
 If you have any Questions you can reach me with the following infomation:
 
-FAfaFSAfsaFSaf
-FafsFSfsAFSAF
-SAfFSfsA
+ Linked: AFAFAFDAFDFAEFAE@LNKED
+ Email: AFEAFEAEAFE@SDFASFS.COM
+Github: SFGGGGDAG@GTH
 

@@ -104,9 +104,9 @@ ${Test}
 ## Questions?
 If you have any Questions you can reach me with the following infomation:
 
-${Linkedin}
-${Email}
-${Github}
+ Linked: ${Linkedin}
+ Email: ${Email}
+Github: ${Github}
 
 `
 
